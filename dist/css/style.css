@@ -1,0 +1,59 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+/* Basic reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* Font related styles to be inherited */
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777;
+  /* Container styles not inherited*/
+  padding: 30px;
+}
+
+/* Header */
+.header {
+  /* container related styles */
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(126, 213, 111, 0.801),
+      rgba(40, 180, 133, 0.801)
+    ),
+    url(../img/hero.jpg); /* Backgrounds in order*/
+  background-size: cover; /* Apapts image to viewport */
+  background-position: top; /* Makes sure image is always positioned to the top */
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 75%,
+    0 100%
+  ); /* define coordinates respective to x y */
+}
+
+/* Logo */
+/* logo Container */
+.logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.logo {
+}
