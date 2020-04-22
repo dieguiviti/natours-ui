@@ -2,6 +2,9 @@
 $color-primary-light: #7ed56f;
 $color-primary: #55c57a;
 $color-primary-dark: #28b485;
+$color-grey-dark: #777;
+$color-white: #ffffff;
+$color-black: #000000;
 
 /* Basic reset */
 *,
@@ -23,7 +26,7 @@ body {
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.7;
-  color: #777;
+  color: $color-grey-dark;
   /* Container styles not inherited*/
   padding: 3rem;
   box-sizing: border-box;
@@ -47,7 +50,7 @@ Header
     0 0,
     100% 0,
     100% 75%,
-    0 100%
+    0 95%
   ); /* define coordinates respective to x y */
   position: relative; /* this enables a reference for absolutely positioned direct child elements */
 }
@@ -86,7 +89,7 @@ Heading
 */
 /* Heading container */
 .heading-primary {
-  color: #fff;
+  color: $color-white;
   text-transform: uppercase;
   /* backface-visibility hack for animated or transformed element shaking prevention */
   backface-visibility: hidden;
@@ -166,18 +169,18 @@ Heading
 /* on hover */
 .btn:hover {
   transform: translateY(-6%);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1rem 2rem rgba($color-black, 0.3);
 }
 /* on click */
 .btn:active {
   transform: translateY(-1%);
-  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.5rem 2rem rgba($color-black, 0.1);
 }
 
 /* White buttons */
 .btn--white {
-  background-color: #ffff;
-  color: #777;
+  background-color: $color-white;
+  color: $color-grey-dark;
 }
 
 .btn::after {
@@ -203,7 +206,7 @@ Heading
 }
 
 .btn--white::after {
-  background-color: #fff;
+  background-color: $color-white;
 }
 
 .btn--animated {
