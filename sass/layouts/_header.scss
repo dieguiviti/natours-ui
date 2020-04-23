@@ -1,0 +1,51 @@
+/* 
+Header Layout
+ */
+/* container related styles */
+.header {
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.801),
+      rgba($color-primary-dark, 0.801)
+    ),
+    url(../img/hero.jpg); /* Backgrounds in order*/
+  background-size: cover; /* Apapts image to viewport */
+  background-position: top; /* Makes sure image is always positioned to the top */
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 75%,
+    0 95%
+  ); /* define coordinates respective to x y */
+  position: relative; /* this enables a reference for absolutely positioned direct child elements */
+
+  /* 
+    Header Logo 
+    */
+  // logo container
+  &__logo-box {
+    position: absolute; /* Absolutely positioned in parent container (Header)*/
+    top: 4rem;
+    left: 4rem;
+  }
+  // logo
+  &__logo {
+    height: 3.5rem;
+  }
+
+  /* 
+    Header content
+    */
+  &__text-box {
+    position: absolute; /* Absolutely positioned in parent container (Header)*/
+    top: 40%; /* in relation to parent (header)*/
+    left: 50%; /* in relation to parent (header)*/
+    transform: translate(
+      -50%,
+      -50%
+    ); /* Transform refers to the element itself. 
+      Positioning the elemnent by translating its x and y values into space. so translating position in regards to its width and height*/
+    text-align: center; /* Applies to inline & | block elements */
+  }
+}

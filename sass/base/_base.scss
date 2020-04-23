@@ -1,0 +1,20 @@
+/* Basic reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* change the global font size*/
+html {
+  // This is = 1rem = 10px
+  font-size: 62.5%;
+}
+
+body {
+  /* Container styles not inherited*/
+  padding: 3rem;
+  box-sizing: border-box;
+}
