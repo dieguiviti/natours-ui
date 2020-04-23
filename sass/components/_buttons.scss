@@ -2,6 +2,7 @@
 .btn {
   &:link,
   &:visited {
+    font-size: $default-font-size;
     text-transform: uppercase;
     text-decoration: none;
     padding: 1.5rem 4rem;
@@ -65,5 +66,33 @@
       animation-delay: 1.5s;
       animation-fill-mode: backwards; --------> Sets the load value of the animated element props to the 0% value in animation.
       */
+  }
+}
+
+// Text buttons
+.btn-text {
+  &:link,
+  &:visited {
+    font-size: $default-font-size;
+    color: $color-primary;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 0.1rem solid $color-primary;
+    padding: 1.5rem;
+    // Allow transitions
+    transition: all 0.6s;
+  }
+  // on hover
+  &:hover {
+    border-radius: 10rem;
+    background-color: $color-primary;
+    color: $color-white;
+    transform: translateY(-0.5rem);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.3);
+  }
+  // on click
+  &:active {
+    transform: translateY(-0.15rem);
+    box-shadow: 0 0.3rem 1rem rgba($color-black, 0.3);
   }
 }
