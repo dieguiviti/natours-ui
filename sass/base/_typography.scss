@@ -1,11 +1,11 @@
 // Typography resets
 /* Font related styles to be inherited */
 body {
-  font-family: 'Lato', sans-serif;
-  font-size: $default-font-size;
-  font-weight: 400;
-  line-height: 1.7;
-  color: $color-grey-dark;
+   font-family: 'Lato', sans-serif;
+   font-size: $default-font-size;
+   font-weight: 400;
+   line-height: 1.7;
+   color: $color-grey-dark;
 }
 
 /* 
@@ -13,73 +13,73 @@ Heading typography
 */
 /* Heading container */
 .heading-primary {
-  color: $color-white;
-  text-transform: uppercase;
-  /* backface-visibility hack for animated or transformed element shaking prevention */
-  backface-visibility: hidden;
-  margin-bottom: 5rem;
+   color: $color-white;
+   text-transform: uppercase;
+   /* backface-visibility hack for animated or transformed element shaking prevention */
+   backface-visibility: hidden;
+   margin-bottom: 5rem;
 
-  /* Main heading span */
-  &--main {
-    display: block; /* Spans are inline elements by default so this allows us to make it occupy 100%w of heading element*/
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-    animation: move-in-right 3s ease-in-out;
-    /* 
+   /* Main heading span */
+   &--main {
+      display: block; /* Spans are inline elements by default so this allows us to make it occupy 100%w of heading element*/
+      font-size: 6rem;
+      font-weight: 400;
+      letter-spacing: 3.5rem;
+      animation: move-in-right 3s ease-in-out;
+      /* 
       animation-name: move-in-right;
       animation-duration: 3s;
       animation-timing-function: ease-in-out;
       */
-  }
-  /* Sub heading span*/
-  &--sub {
-    display: block; /* Spans are inline elements by default so this allows us to make it occupy 100%w of heading element*/
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.74rem;
-    animation: move-in-left 3s ease-in-out;
-    /* 
+   }
+   /* Sub heading span*/
+   &--sub {
+      display: block; /* Spans are inline elements by default so this allows us to make it occupy 100%w of heading element*/
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 1.74rem;
+      animation: move-in-left 3s ease-in-out;
+      /* 
       animation-name: move-in-left;
       animation-duration: 3s;
       animation-timing-function: ease-in-out;
       */
-  }
+   }
 }
 
 // Heading secondary
 .heading-secondary {
-  display: inline-block;
-  font-size: 3.5rem;
-  letter-spacing: 0.2rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  background-image: linear-gradient(
-    to right,
-    $color-primary-light,
-    $color-primary-dark
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  // allow and time transition
-  transition: all 0.2s;
+   display: inline-block;
+   font-size: 3.5rem;
+   letter-spacing: 0.2rem;
+   text-transform: uppercase;
+   font-weight: 700;
+   background-image: linear-gradient(
+      to right,
+      $color-primary-light,
+      $color-primary-dark
+   );
+   -webkit-background-clip: text;
+   background-clip: text;
+   color: transparent;
+   // allow and time transition
+   transition: all 0.2s;
 
-  &:hover {
-    transform: skewX(-7.5deg) skewY(-7.5deg) scale(1.1);
-    text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
-  }
+   &:hover {
+      transform: skewX(-7.5deg) skewY(-7.5deg) scale(1.1);
+      text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
+   }
 }
 
 .heading-tertiary {
-  font-size: $default-font-size;
-  font-weight: 700;
-  text-transform: uppercase;
+   font-size: $default-font-size;
+   font-weight: 700;
+   text-transform: uppercase;
 }
 
 .paragraph {
-  font-size: $default-font-size;
-  &:not(:last-child) {
-    margin-bottom: 3rem;
-  }
+   font-size: $default-font-size;
+   &:not(:last-child) {
+      margin-bottom: 3rem;
+   }
 }

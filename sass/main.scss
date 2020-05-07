@@ -14,8 +14,10 @@
 @import 'layouts/header';
 
 // Component imports
+@import 'components/cards';
 @import 'components/buttons';
 @import 'components/composition';
+@import 'components/feature-box';
 
 // Page imports
 @import 'pages/home';
