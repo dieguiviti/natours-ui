@@ -10,10 +10,10 @@
 @import 'base/utilities';
 
 // Layout imports
+@import 'layouts/navigation';
 @import 'layouts/grid';
 @import 'layouts/header';
 @import 'layouts/footer';
-@import 'layouts/navigation';
 
 // Component imports
 @import 'components/cards';
