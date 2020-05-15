@@ -9,10 +9,6 @@
       background-color: $color-white;
       height: 7rem;
       width: 7rem;
-      -webkit-transform: translate3d(0px, 0px, 0px);
-      transform: translate3d(0px, 0px, 0px);
-      -webkit-transform: translateZ(0);
-      transform: translateZ(0);
       position: fixed;
       top: 6rem;
       right: 6rem;
@@ -26,10 +22,6 @@
       width: 6rem;
       border-radius: 50%;
       position: fixed;
-      -webkit-transform: translate3d(0px, 0px, 0px);
-      transform: translate3d(0px, 0px, 0px);
-      -webkit-transform: translateZ(0);
-      transform: translateZ(0);
       top: 6.5rem;
       right: 6.5rem;
       background-image: radial-gradient(
