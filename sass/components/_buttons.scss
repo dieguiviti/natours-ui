@@ -1,5 +1,6 @@
 /* Button component */
 .btn {
+   &,
    &:link,
    &:visited {
       font-size: $default-font-size;
@@ -12,6 +13,10 @@
       /* backface-visibility hack for animated or transformed element shaking prevention */
       backface-visibility: hidden;
       position: relative;
+
+      // Chgange the <button> element
+      border: none;
+      cursor: pointer;
    }
    // after element
    &::after {
@@ -46,6 +51,10 @@
    &:active {
       transform: translateY(-1%);
       box-shadow: 0 0.5rem 2rem rgba($color-black, 0.1);
+   }
+
+   &:focus {
+      outline: none;
    }
 
    /* White buttons */

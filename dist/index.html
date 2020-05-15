@@ -395,7 +395,135 @@
                <a href="#" class="btn-text">Read all testimonials &rarr;</a>
             </div>
          </section>
+
+         <!-- Form Section -->
+         <section class="booking-section">
+            <div class="row">
+               <div class="booking">
+                  <div class="booking__form">
+                     <!-- Booking Form heading -->
+                     <div class="u-margin-bottom-medium">
+                        <h2 class="heading-secondary">
+                           Start booking a tour
+                        </h2>
+                     </div>
+                     <form action="#" class="form">
+                        <!-- Input Groups -->
+                        <!-- NAME -->
+                        <div class="form__group">
+                           <input
+                              class="form__input"
+                              type="text"
+                              placeholder="Full name"
+                              id="bookingFormName"
+                              required
+                           />
+                           <!-- Labels below to allow sibling selector -->
+                           <label class="form__label" for="bookingFormName"
+                              >Full name</label
+                           >
+                        </div>
+                        <!-- EMAIL -->
+                        <div class="form__group">
+                           <input
+                              class="form__input"
+                              type="email"
+                              placeholder="Email address"
+                              id="bookingFormEmail"
+                              required
+                           />
+                           <!-- Labels below to allow sibling selector -->
+                           <label class="form__label" for="bookingFormName"
+                              >Email address</label
+                           >
+                        </div>
+                        <!-- RADIO BUTTONS -->
+                        <div class="form__group">
+                           <div class="form__radio-group">
+                              <input
+                                 class="form__radio-input"
+                                 type="radio"
+                                 id="bookingFormRadioSmall"
+                                 name="tourSize"
+                              />
+                              <label
+                                 class="form__radio-label"
+                                 for="bookingFormRadioSmall"
+                              >
+                                 <span class="form__radio-button"></span>
+                                 Small tour group
+                              </label>
+                           </div>
+                           <div class="form__radio-group">
+                              <input
+                                 class="form__radio-input"
+                                 type="radio"
+                                 id="bookingFormRadioLarge"
+                                 name="tourSize"
+                              />
+                              <label
+                                 class="form__radio-label"
+                                 for="bookingFormRadioLarge"
+                              >
+                                 <span class="form__radio-button"></span>
+                                 Large tour group
+                              </label>
+                           </div>
+                        </div>
+                        <!-- button -->
+                        <div class="form__group u-margin-top-medium">
+                           <button class="btn btn--green">
+                              Next step &rarr;
+                           </button>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </section>
       </main>
+
+      <footer class="footer">
+         <div class="footer__logo-box">
+            <img
+               class="footer__logo"
+               src="./img/logo-green-2x.png"
+               alt="Natours Logo"
+            />
+         </div>
+         <div class="row">
+            <div class="col-1-of-2">
+               <div class="footer__navigation">
+                  <ul class="footer__list">
+                     <li class="footer__list-item">
+                        <a class="footer__link" href="">Company</a>
+                     </li>
+                     <li class="footer__list-item">
+                        <a class="footer__link" href="">Contact us</a>
+                     </li>
+                     <li class="footer__list-item">
+                        <a class="footer__link" href="">Careers</a>
+                     </li>
+                     <li class="footer__list-item">
+                        <a class="footer__link" href="">Privacy Policy</a>
+                     </li>
+                     <li class="footer__list-item">
+                        <a class="footer__link" href="">Terms</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="col-1-of-2">
+               <p class="footer__copyright">
+                  Markup and styling fully implemented by
+                  <a class="footer__link" href="">DIEGO GALLOVICH</a> for his
+                  online course
+                  <a class="footer__link" href="">ADVANCED CSS & SASS</a>.
+                  Copyright © by Diego Gallovich. Design by Jonas Schmedtmann.
+               </p>
+            </div>
+         </div>
+      </footer>
 
       <!-- <section class="grid-test">
       <div class="row">
