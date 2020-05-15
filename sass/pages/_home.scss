@@ -25,8 +25,14 @@
 }
 
 // Tours Section
-.tours-section {
-   padding: 25rem 0 50rem 0;
+.featured-products-section {
+   padding: 20rem 0;
    background-color: $color-grey-light-1;
-   margin-top: -15vh;
+   margin-top: -13vh;
+}
+
+// testimonials section
+.testimonials-section {
+   position: relative;
+   padding: 15rem 0;
 }

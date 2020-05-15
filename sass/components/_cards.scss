@@ -1,5 +1,6 @@
 .card {
    // FUNCTIONALITY
+   // Perspective is relative to the card flip. In this case the children (sides)
    perspective: 150rem;
    -moz-perspective: 150rem;
    // enable absolute positioning
@@ -9,7 +10,7 @@
    // side
    &__side {
       height: 53rem;
-      transition: all 0.9s ease-in-out;
+      transition: all 1.2s ease-in-out;
       border-radius: 0.3rem;
       box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
       overflow: hidden;
