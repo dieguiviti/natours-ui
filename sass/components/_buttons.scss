@@ -11,7 +11,7 @@
       border-radius: 100px;
       transition: all 0.3s; /* time transitions for all props to .5s*/
       /* backface-visibility hack for animated or transformed element shaking prevention */
-      backface-visibility: hidden;
+      backface-visibility: visible;
       position: relative;
 
       // Chgange the <button> element
