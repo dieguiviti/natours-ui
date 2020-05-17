@@ -11,10 +11,28 @@
 html {
    // This is = 1rem = 10px
    font-size: 62.5%;
+
+   // Responsiveness
+   @include responsive(tablet-landscape) {
+      font-size: 56.25%; // 1rem == 9px
+   }
+
+   @include responsive(tablet-portrait) {
+      font-size: 50%; // 1rem == 8px
+   }
+
+   @include responsive(big-desktop) {
+      font-size: 75%; // 1 rem = 12px
+   }
 }
 
 body {
    /* Container styles not inherited*/
    padding: 3rem;
    box-sizing: border-box;
+
+   // @Media Queries
+   @include responsive(tablet-portrait) {
+      padding: 0;
+   }
 }

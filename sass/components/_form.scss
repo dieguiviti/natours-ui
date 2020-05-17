@@ -16,6 +16,11 @@
       display: block;
       transition: all 0.3s;
 
+      // media Query
+      @include responsive(tablet-portrait) {
+         width: 100%;
+      }
+
       &:focus {
          outline: none;
          box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
@@ -50,6 +55,12 @@
    &__radio-group {
       width: 49%;
       display: inline-block;
+
+      // media Query
+      @include responsive(tablet-portrait) {
+         width: 100%;
+         margin-bottom: 2rem;
+      }
    }
 
    &__radio-input {

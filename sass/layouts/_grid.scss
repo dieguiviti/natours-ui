@@ -1,8 +1,24 @@
 .row {
    max-width: $grid-width;
-   margin: 0 5%;
+   margin: 0 auto;
+
    &:not(:last-child) {
       margin-bottom: $gutter-vertical;
+
+      //@media query
+      @include responsive(tablet-portrait) {
+         margin-bottom: 8rem;
+      }
+   }
+
+   // @Media query
+   @include responsive(tablet-portrait) {
+      max-width: 50%;
+      padding: 0 3rem;
+   }
+   @include responsive(phone) {
+      max-width: 65%;
+      padding: 0 3rem;
    }
 
    @include clearfix;
@@ -12,8 +28,19 @@
       float: left;
       &:not(:last-child) {
          margin-right: $gutter-horizontal;
+         // @Media Queries
+         @include responsive(tablet-portrait) {
+            margin-right: 0;
+            margin-bottom: 6rem;
+         }
+      }
+
+      // @Media Queries
+      @include responsive(tablet-portrait) {
+         width: 100% !important;
       }
    }
+
    // Specific column sizes
    .col-1-of-2 {
       width: calc((100% - #{$gutter-horizontal}) / 2);

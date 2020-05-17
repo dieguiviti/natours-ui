@@ -4,12 +4,26 @@
    padding: 25rem 0;
    margin-top: -20vh;
    margin-bottom: -20vh;
+
+   // Media queries
+   @include responsive(tablet-landscape) {
+      padding: 20rem 0;
+      margin: -12vh 0;
+   }
+   @include responsive(tablet-portrait) {
+      height: 90vh;
+      padding: 20rem 0;
+      margin: -12vh 0;
+   }
+   @include responsive(phone) {
+      margin-bottom: -20vh;
+   }
 }
 
 // Features section
 .features-section {
    margin-top: 5vh;
-   padding: 25rem 0;
+   padding: 20rem 0;
    background-image: linear-gradient(
          to right bottom,
          rgba($color-primary-light, 0.801),
@@ -22,19 +36,38 @@
    & > * {
       transform: skewY(7deg);
    }
+
+   // Media query
+   @include responsive(tablet-portrait) {
+      padding: 10rem 0;
+   }
 }
 
 // Tours Section
 .featured-products-section {
-   padding: 20rem 0;
+   padding: 25rem 0;
    background-color: $color-grey-light-1;
    margin-top: -13vh;
+
+   // Media query
+   @include responsive(tablet-landscape) {
+      padding: 25rem 0 15rem 0;
+      margin-top: -9vh;
+   }
+   @include responsive(tablet-portrait) {
+      padding: 25rem 0 15rem 0;
+      margin-top: -9vh;
+   }
 }
 
 // testimonials section
 .testimonials-section {
    position: relative;
    padding: 15rem 0;
+
+   @include responsive(tablet-portrait) {
+      padding: 10rem 0;
+   }
 }
 
 // Booking section
@@ -56,13 +89,39 @@
          ),
          url('../img/nat-10.jpg');
       background-size: cover;
-      height: 100%;
       border-radius: 0.3rem;
       box-shadow: 0 1.5rem 4rem rgba($color-black, 0.6);
+
+      // media query
+      @include responsive(tablet-landscape) {
+         background-image: linear-gradient(
+               105deg,
+               rgba($color-white, 0.8) 0%,
+               rgba($color-white, 0.8) 70%,
+               transparent 70%
+            ),
+            url('../img/nat-10.jpg');
+      }
+      @include responsive(tablet-portrait) {
+         background-image: linear-gradient(
+               105deg,
+               rgba($color-white, 0.8) 0%,
+               rgba($color-white, 0.8) 50%,
+               rgba($color-white, 0.8) 100%
+            ),
+            url('../img/nat-10.jpg');
+      }
 
       &__form {
          width: 50%;
          padding: 6rem;
+         // Media Query
+         @include responsive(tablet-landscape) {
+            width: 70%;
+         }
+         @include responsive(tablet-portrait) {
+            width: 100%;
+         }
       }
    }
 }

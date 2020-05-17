@@ -26,6 +26,22 @@ Header Layout
    ); /* define coordinates respective to x y */
    position: relative; /* this enables a reference for absolutely positioned direct child elements */
 
+   // @ media query
+   @include responsive(tablet-landscape) {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+   }
+
+   @include responsive(tablet-portrait) {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+   }
+
+   @include responsive(phone) {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+   }
+
    /* 
     Header Logo 
     */
@@ -34,10 +50,15 @@ Header Layout
       position: absolute; /* Absolutely positioned in parent container (Header)*/
       top: 4rem;
       left: 4rem;
+
+      @include responsive(tablet-portrait) {
+         top: 5.2rem;
+         right: 4.5rem;
+      }
    }
    // logo
    &__logo {
-      height: 3.5rem;
+      height: 4rem;
    }
 
    /* 

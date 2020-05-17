@@ -1,42 +1,70 @@
 // Picture composition component
 .composition {
-  // Enable absolute positioning relation to children
-  position: relative;
-  &__photo {
-    width: 55%;
-    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
-    border-radius: 0.3rem;
-    position: absolute;
-    // Enable outline offset
-    outline-offset: 2rem;
-    // allow transition
-    transition: all 0.6s;
+   // Enable absolute positioning relation to children
+   position: relative;
+   &__photo {
+      width: 55%;
+      box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+      border-radius: 0.3rem;
+      position: absolute;
+      // Enable outline offset
+      outline-offset: 2rem;
+      // allow transition
+      transition: all 0.6s;
 
-    // Modifiers
-    &--p1 {
-      left: 0;
-      top: 0;
-    }
-    &--p2 {
-      right: 0;
-      top: 4rem;
-    }
-    &--p3 {
-      left: 10rem;
-      top: 15rem;
-    }
+      // media Query
+      @include responsive(phone) {
+         position: relative;
+         float: left;
+         width: 33.33%;
+         box-shadow: 0 1.5rem 3rem rgba($color-black, 0.2);
+      }
 
-    &:hover {
-      outline: 1.5rem solid $color-primary;
-      transform: scale(1.05);
-      box-shadow: 0 2rem 5rem rgba($color-black, 0.6);
-      z-index: 1;
-    }
-  }
+      // Modifiers
+      &--p1 {
+         left: 0;
+         top: 0;
 
-  //   Select all non hovered children in composition
-  &:hover &__photo:not(:hover) {
-    transform: scale(0.9);
-    box-shadow: 0 1rem 3rem rgba($color-black, 0.2);
-  }
+         // media Query
+         @include responsive(phone) {
+            top: 0;
+            transform: scale(1.2);
+         }
+      }
+      &--p2 {
+         right: 0;
+         top: 4rem;
+
+         // media Query
+         @include responsive(phone) {
+            top: 0;
+            transform: scale(1.4);
+            z-index: 1;
+         }
+      }
+      &--p3 {
+         left: 10rem;
+         top: 15rem;
+
+         // media Query
+         @include responsive(phone) {
+            left: 0;
+            top: 0;
+            transform: scale(1.2);
+         }
+      }
+
+      &:hover {
+         outline: 1.5rem solid $color-primary;
+         transform: scale(1.05);
+         box-shadow: 0 2rem 5rem rgba($color-black, 0.6);
+         z-index: 1;
+      }
+   }
+
+   //   Select all non hovered children in composition
+   &:hover &__photo:not(:hover) {
+      transform: scale(0.9);
+      box-shadow: 0 1rem 3rem rgba($color-black, 0.2);
+   }
 }

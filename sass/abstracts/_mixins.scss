@@ -12,3 +12,62 @@
    left: 50%;
    transform: translate(-50%, -50%);
 }
+
+/* 
+   MEDIA QUERY LEGEND🧮
+
+   0 - 600 px---------------------> 📱 Phones
+   600 -900 px--------------------> Tablet Portrait
+   900 - 1200 px------------------> Tablet landscape
+   1200 - 1800 px ----------------> Our main style (Desktop)
+   1800+ -------------------------> Bigger desktop
+
+   Breakpoint choices
+   - Phone
+   - tablet-portrait
+   - tablet-landscape
+   - big-desktop
+
+   ORDER: 
+   - Put larger max-widths on top. 
+      1- responsive(tablet-landscape);  -----> width < 900
+      2- responsive(tablet-portrait);   -----> width < 1200
+      3- responsive(phone)              -----> width < 600
+
+   Besides this, handle project's responsiveness
+   in the following order: 
+      1- Base
+      2- typography
+      3- layouts
+      4- pages
+      5- components
+*/
+@mixin responsive($breakpoint) {
+   @if $breakpoint == phone {
+      @media (max-width: 37.5em) {
+         // 600px
+         @content;
+      }
+   }
+
+   @if $breakpoint == tablet-portrait {
+      @media (max-width: 56.25em) {
+         // 900px
+         @content;
+      }
+   }
+
+   @if $breakpoint == tablet-landscape {
+      @media (max-width: 75em) {
+         // 1200px
+         @content;
+      }
+   }
+
+   @if $breakpoint == big-desktop {
+      @media (min-width: 112.5em) {
+         // 1800px
+         @content;
+      }
+   }
+}
