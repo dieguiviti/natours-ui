@@ -552,11 +552,24 @@
       <footer class="footer">
          <!-- Footer logo -->
          <div class="footer__logo-box">
-            <img
-               class="footer__logo"
-               src="./img/logo-green-2x.png"
-               alt="Natours Logo"
-            />
+            <!-- implementing density switching and art direction with the picture el, and srcset and media atts -->
+            <picture class="footer__logo">
+               <source
+                  srcset="
+                     ./img/logo-green-1x.png 1x,
+                     ./img/logo-green-2x.png 2x
+                  "
+                  media="(max-width: 37.5rem)"
+               />
+               <img
+                  class="footer__logo"
+                  srcset="
+                     ./img/logo-green-1x.png 1x,
+                     ./img/logo-green-2x.png 2x
+                  "
+                  alt="Natours Logo"
+               />
+            </picture>
          </div>
          <!--  Info and navigation row -->
          <div class="row">
