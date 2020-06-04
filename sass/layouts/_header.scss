@@ -3,28 +3,60 @@ Header Layout
  */
 /* container related styles */
 .header {
-   height: 95vh;
+   height: 85vh;
    background-image: linear-gradient(
          to right bottom,
          rgba($color-primary-light, 0.801),
          rgba($color-primary-dark, 0.801)
       ),
-      url(../img/hero.jpg); /* Backgrounds in order*/
+      url(../img/hero-small.jpg); /* Backgrounds in order*/
    background-size: cover; /* Apapts image to viewport */
    background-position: top; /* Makes sure image is always positioned to the top */
-   -webkit-clip-path: polygon(
-      0 0,
-      100% 0,
-      100% 80%,
-      0 100%
-   ); /* define coordinates respective to x y */
+   position: relative; /* this enables a reference for absolutely positioned direct child elements */
    clip-path: polygon(
       0 0,
       100% 0,
       100% 80%,
       0 100%
    ); /* define coordinates respective to x y */
-   position: relative; /* this enables a reference for absolutely positioned direct child elements */
+
+   @supports (clip-path: polygon(0, 0)) or (-webkit-clip-path: polygon(0 0)) or
+      (-moz-clip-path: polygon(0 0)) {
+      -webkit-clip-path: polygon(
+         0 0,
+         100% 0,
+         100% 80%,
+         0 100%
+      ); /* define coordinates respective to x y */
+      -moz-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+      clip-path: polygon(
+         0 0,
+         100% 0,
+         100% 80%,
+         0 100%
+      ); /* define coordinates respective to x y */
+   }
+   // Resolution media query
+   @media (min-resolution: 192dpi) and (min-width: 600px),
+      (-webkit-min-device-pixel-ration: 2) and (min-width: 600px),
+      (min-width: 2000px) {
+      background-image: linear-gradient(
+            to right bottom,
+            rgba($color-secondary-light, 0.801),
+            rgba($color-secondary-dark, 0.801)
+         ),
+         url(../img/hero.jpg); /* Backgrounds in order*/
+   }
+
+   // Display large image on big screens
+   @media (min-width: 2000px) {
+      background-image: linear-gradient(
+            to right bottom,
+            rgba($color-secondary-light, 0.801),
+            rgba($color-secondary-dark, 0.801)
+         ),
+         url(../img/hero.jpg); /* Backgrounds in order*/
+   }
 
    // @ media query
    @include responsive(tablet-landscape) {

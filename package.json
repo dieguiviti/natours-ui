@@ -1,0 +1,24 @@
+{
+   "name": "natours-ui",
+   "version": "1.0.0",
+   "description": "",
+   "main": "index.js",
+   "dependencies": {},
+   "devDependencies": {
+      "autoprefixer": "^9.8.0",
+      "postcss-cli": "^7.1.1"
+   },
+   "scripts": {
+      "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' dist/css/main.min.css -o dist/css/main.prefixed.min.css"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/dieguiviti/natours-ui.git"
+   },
+   "author": "",
+   "license": "ISC",
+   "bugs": {
+      "url": "https://github.com/dieguiviti/natours-ui/issues"
+   },
+   "homepage": "https://github.com/dieguiviti/natours-ui#readme"
+}

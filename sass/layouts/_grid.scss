@@ -17,8 +17,8 @@
       padding: 0 3rem;
    }
    @include responsive(phone) {
-      max-width: 65%;
-      padding: 0 3rem;
+      max-width: 80%;
+      padding: 0;
    }
 
    @include clearfix;
