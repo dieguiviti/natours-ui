@@ -13,6 +13,7 @@
    @include responsive(tablet-portrait) {
       height: 90vh;
       padding: 20rem 0;
+      padding-bottom: 100rem;
       margin: -12vh 0;
    }
    @include responsive(phone) {
