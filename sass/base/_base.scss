@@ -9,6 +9,9 @@
 
 /* change the global font size*/
 html {
+   //scroll behavior
+   scroll-behavior: smooth;
+
    // This is = 1rem = 10px
    font-size: 62.5%;
 
@@ -35,4 +38,10 @@ body {
    @include responsive(tablet-portrait) {
       padding: 0;
    }
+}
+
+// Selection of elements
+::selection {
+   background-color: $color-primary;
+   color: $color-grey-light-1;
 }
