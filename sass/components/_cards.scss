@@ -204,7 +204,8 @@
    }
 
    // media query
-   @include responsive(tablet-portrait) {
+   // @include responsive(tablet-portrait)
+   @media only screen and (max-width: 56.25em), only screen and (hover: none) {
       // FUNCTIONALITY
       height: auto;
       width: auto;

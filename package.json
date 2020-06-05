@@ -7,13 +7,16 @@
    "devDependencies": {
       "autoprefixer": "^9.8.0",
       "concat": "^1.0.3",
+      "live-server": "^1.2.1",
       "node-sass": "^4.14.1",
       "npm-run-all": "^4.1.5",
       "postcss-cli": "^7.1.1"
    },
    "scripts": {
-      "compile:sass": "node-sass ./sass/main.scss ./dist/css/style.compiled.css",
       "watch:sass": "node-sass ./sass/main.scss ./dist/css/style.compiled.css -w",
+      "devserver": "live-server",
+      "start": "npm-run-all --parallel devserver watch:sass",
+      "compile:sass": "node-sass ./sass/main.scss ./dist/css/style.compiled.css",
       "concat:css": "concat -o ./dist/css/style.concat.css ./dist/css/style.compiled.css ./dist/css/icon-fonts.css",
       "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' ./dist/css/style.concat.css -o ./dist/css/style.prefixed.min.css",
       "compress:css": "node-sass ./dist/css/style.prefixed.min.css ./dist/css/style.min.css --output-style compressed",
